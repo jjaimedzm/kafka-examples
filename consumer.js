@@ -19,26 +19,14 @@ try {
     }
   );
 
-
-
-   // consumer = new Consumer(
-   //      client,
-   //      [
-   //          { topic: 't', partition: 0 }, { topic: 't1', partition: 1 }
-   //      ],
-   //      {
-   //          autoCommit: false
-   //      }
-   //  );
-
-
   consumer.on('message', async function(message) {
-    console.log('here');
+    // console.log(message)
+    // console.log('here');
     console.log(
       'kafka-> ',
       message.value
     );
-  })
+  });
   consumer.on('error', function(err) {
     console.log('error', err);
   });
